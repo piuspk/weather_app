@@ -15,7 +15,7 @@ const fnc = async (e) => {
       const respose = await fetch(url);
       const data = await respose.json();
       const arrdata = [data];
-      temperature.innerHTML = arrdata[0].main.temp;
+      temperature.innerHTML = `${arrdata[0].main.temp}&deg; Celsius` ;
       city_space.innerHTML = `${arrdata[0].name}, ${arrdata[0].sys.country}`;
        
     } catch (error) {
